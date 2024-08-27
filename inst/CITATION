@@ -1,0 +1,16 @@
+citHeader("To cite the biostats101 package in publications, please use:")
+
+bibentry(
+  bibtype = "Manual",
+  title = "biostats101: Practical Functions for Biostatistics Beginners",
+  author = c(
+    person(given = "Marina", family = "Mautner Wizentier"),
+    person(given = "Melody S.", family = "Goodman"),
+    person(given = "Jemar R.", family = "Bather")
+  ),
+  year = "2024",
+  note = "R package version 0.1.0",
+  url = "https://CRAN.R-project.org/package=biostats101"
+)
+
+citFooter("Please also cite the dependencies used within the package.")

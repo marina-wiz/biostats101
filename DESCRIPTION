@@ -1,0 +1,23 @@
+Package: biostats101
+Type: Package
+Title: Practical Functions for Biostatistics Beginners
+Version: 0.1.0
+Authors@R: c(
+    person(given = "Marina", family = "Mautner Wizentier", role = c("aut", "cre"), 
+           email = "mm12025@nyu.edu", comment = c(ORCID = "0000-0002-7259-5109")),
+    person(given = "Melody S.", family = "Goodman", role = "aut",
+           comment = c(ORCID = "0000-0001-8932-624X")),
+    person(given = "Jemar R.", family = "Bather", role = "aut", 
+           comment = c(ORCID = "0000-0002-0285-3678")))
+Description: A set of user-friendly functions designed to fill gaps in existing introductory biostatistics R tools, making it easier for newcomers to perform basic biostatistical analyses without needing advanced programming skills.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Imports:
+    dplyr,
+    ggplot2,
+    tidyr
+Suggests:
+    roxygen2,
+    testthat
+RoxygenNote: 7.3.2
+Roxygen: list(markdown = TRUE)

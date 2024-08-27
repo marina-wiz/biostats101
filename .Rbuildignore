@@ -1,0 +1,9 @@
+^.*\.Rproj$
+^\.Rproj\.user$
+^LICENSE\.md$
+^\.git$
+^\.gitignore$
+^\\.Rcheck$
+^\\.Rhistory$
+^\\.DS_Store$
+^biostats101_0.1.0\.tar\.gz$

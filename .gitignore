@@ -1,0 +1,31 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+
+# R-specific files
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+
+# R build artifacts
+/*.tar.gz
+/*.Rcheck/
+
+# MacOS-specific files
+.DS_Store
+
+# Files related to R CMD check
+.Rcheck/
+
+# Ignoring the compiled documentation folder if present
+/docs/
+
+# Ignore other temporary or unnecessary files
+*.log
+*.out
+*.aux
+*.toc
+*.pdf
+*.html
