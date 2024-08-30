@@ -21,6 +21,7 @@
 #' mean_CI(values)
 #' @export
 mean_CI <- function(data, conf.level = 0.95, alternative = "two.sided") {
+
   # Remove NA values
   data <- na.omit(data)
 
@@ -42,24 +43,22 @@ mean_CI <- function(data, conf.level = 0.95, alternative = "two.sided") {
       sample_mean - qt(p = 1 - alpha/2, df = n - 1) * std_dev / sqrt(n)
     upper_bound <-
       sample_mean + qt(p = 1 - alpha/2, df = n - 1) * std_dev / sqrt(n)
-    ci_type <- "(two-sided)"
   } else if (alternative == "greater") {
     lower_bound <-
       sample_mean - qt(p = 1 - alpha, df = n - 1) * std_dev / sqrt(n)
     upper_bound <- Inf
-    ci_type <- "(one-sided)"
   } else if (alternative == "less") {
     lower_bound <- -Inf
     upper_bound <-
       sample_mean + qt(p = 1 - alpha, df = n - 1) * std_dev / sqrt(n)
-    ci_type <- "(one-sided)"
   } else {
     stop("Alternative must be one of 'two.sided', 'greater', or 'less'.")
   }
 
-  # Print the confidence interval level with the type
-  cat(paste0(100 * conf.level, "% CI ", ci_type, "\n"))
+  # Create a named vector with mean and confidence interval bounds
+  results <- c(sample_mean, lower_bound, upper_bound)
+  names(results) <- c("mean", paste0("lwr.", 100 * conf.level),
+                      paste0("upr.", 100 * conf.level))
 
-  # Return the result as a named vector
-  return(c(mean = sample_mean, lower = lower_bound, upper = upper_bound))
+  return(results)
 }
