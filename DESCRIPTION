@@ -1,7 +1,7 @@
 Package: biostats101
 Type: Package
 Title: Practical Functions for Biostatistics Beginners
-Version: 0.1.0
+Version: 0.1.1
 Authors@R: c(
     person(given = "Marina", family = "Mautner Wizentier", role = c("aut", "cre"), 
            email = "mm12025@nyu.edu", comment = c(ORCID = "0000-0002-7259-5109")),

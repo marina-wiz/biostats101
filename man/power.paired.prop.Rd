@@ -14,15 +14,14 @@ power.paired.prop(
 )
 }
 \arguments{
-\item{p1}{Numeric, the proportion for the first group}
+\item{p1}{Numeric, the proportion at the first occasion.}
 
-\item{p2}{Numeric, the proportion for the second group.}
+\item{p2}{Numeric, the proportion at the second occasion.}
 
-\item{n}{Numeric, the sample size. If \code{n} is provided, the function will
-calculate the power.}
+\item{n}{Numeric, the sample size.}
 
-\item{power}{Numeric, the desired power (1 - beta). If \code{power} is provided,
-the function will calculate the required sample size.}
+\item{power}{Numeric, the desired power (1 - beta). Default is 0.8 when
+calculating sample size.}
 
 \item{conf.level}{Numeric, the confidence level (1 - alpha). Default is 0.95.}
 
@@ -42,7 +41,7 @@ sample size given the power for paired proportions p1 and p2.
 power.paired.prop(p1 = 0.1, p2 = 0.15, n = 900)
 
 # Calculate the sample size given the power for paired proportions
-power.paired.prop(p1 = 0.15, p2 = 0.1, n = 900, alternative='one.sided')
+power.paired.prop(p1 = 0.15, p2 = 0.1, power = 0.8)
 }
 \references{
 McNemar, Q. (1947). Note on the sampling error of the difference between

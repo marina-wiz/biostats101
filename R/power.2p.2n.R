@@ -62,6 +62,12 @@ power.2p.2n <- function(
   if (is.null(p1) || is.null(p2)) {
     stop("Both 'p1' and 'p2' must be provided.")
   }
+  if (!is.numeric(p1) || p1 <= 0 || p1 >= 1) {
+    stop("'p1' must be numeric in [0, 1].")
+  }
+  if (!is.numeric(p2) || p2 <= 0 || p2 >= 1) {
+    stop("'p2' must be numeric in [0, 1].")
+  }
   if (!is.null(conf.level)) {
     if (!is.numeric(conf.level) || conf.level <= 0 || conf.level >= 1) {
       stop("'conf.level' must be numeric in [0, 1].")

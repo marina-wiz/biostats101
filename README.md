@@ -65,7 +65,7 @@ library(biostats101)
 power.paired.prop(p1 = 0.1, p2 = 0.15, n = 900)
 
 # Calculate the sample size given the power for paired proportions
-power.paired.prop(p1 = 0.15, p2 = 0.1, n = 900, alternative='one.sided')
+power.paired.prop(p1 = 0.15, p2 = 0.1, power = 0.8)
 ```
 
 ### 3. `power.2p.2n`
